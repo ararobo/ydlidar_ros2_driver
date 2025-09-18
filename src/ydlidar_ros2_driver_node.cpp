@@ -183,7 +183,7 @@ int main(int argc, char *argv[])
     RCLCPP_ERROR(node->get_logger(), "%s\n", laser.DescribeError());
   }
 
-  auto laser_pub = node->create_publisher<sensor_msgs::msg::LaserScan>("/ydlidar/scan", rclcpp::SensorDataQoS());
+  auto laser_pub = node->create_publisher<sensor_msgs::msg::LaserScan>("/ydlidar/scan", rclcpp::QoS(20));
   auto pc_pub = node->create_publisher<sensor_msgs::msg::PointCloud>("point_cloud", rclcpp::SensorDataQoS());
 
   auto stop_scan_service =

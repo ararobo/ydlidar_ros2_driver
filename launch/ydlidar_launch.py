@@ -46,7 +46,7 @@ def generate_launch_description():
     tf2_node = Node(package='tf2_ros',
                     executable='static_transform_publisher',
                     name='static_tf_pub_laser',
-                    arguments=['0', '0.48', '0.02', '1.57075', '0', '3.1415','base_link','laser_frame'],
+                    arguments=['0', '0.48', '0.02', '1.57075', '0', '0','base_link','laser_frame'],
                     )
 
     return LaunchDescription([
